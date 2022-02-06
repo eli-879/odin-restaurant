@@ -1,0 +1,174 @@
+body {
+    margin: 0px;
+    background-image: url("images/homepage.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgba(8, 8, 8, 0.6);
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    text-align: center;
+    height: 10vh;
+}
+
+.restaurant {
+    color: white;
+    margin: auto;
+    margin-left: 32px;
+    z-index: 100;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navigation {
+    margin-left: auto;
+    display: flex;
+    z-index: 100;
+    align-items: center;
+}
+
+.nav-button {
+    height: 100%;
+    width: 128px;
+    background-color: black;
+    border-style: none;
+    color: white;
+    transition: 0.3s;
+    padding: 0;
+}
+
+.nav-button:hover {
+    background-color: darkgray;
+    
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.mobile-nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    min-height: 90vh;
+    z-index: 99;
+    background-color: black;
+    padding-top: 200px;
+    transition: 0.4s;
+}
+
+.mobile-nav.active {
+    bottom: 0;
+    
+}
+
+.b {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    border-style: none;
+    background-color: black;
+    color: white;
+    margin-bottom: 32px;
+    transition: 0.3s;
+}
+
+.b:hover {
+    background-color: darkgray;
+}
+
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+    .nav-button {
+        display: none;
+        width: 100%;
+    }
+}
+
+.main-body-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    
+    animation: fadeIn 1.5s;
+}
+
+.menu-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    height: 100%;
+    width: 80%;
+    color: white;
+    animation: fadeIn 1.5s;
+}
+
+.menu-title {
+    font-size: 48px;
+}
+
+.menu-item-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.contact-body {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 32px;
+    margin: 32px;
+    animation: fadeIn 1.5s;
+}
+
+.active {
+    opacity: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
